@@ -1,0 +1,59 @@
+Script started on 2022-01-12 11:02:52+07:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="131" LINES="15"]
+]0;tam@DESKTOP-R8039K3: /mnt/d/part12-containers-applications[01;32mtam@DESKTOP-R8039K3[00m:[01;34m/mnt/d/part12-containers-applications[00m$ docker exec -it todo-backend_mongo_1 mongo -u root -p example[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pscript script-answers/exercise12_8.txtdocker exec -it todo-backend_mongo_1 mongo -u root -p example
+MongoDB shell version v5.0.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("7439355a-7050-4d9a-9fe5-c37acc05ecdf") }
+MongoDB server version: 5.0.5
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2022-01-12T03:53:53.191+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2022-01-12T03:53:54.098+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_databs[3G[Juse the_datab[16Gase[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> data[3G[Jdat[6G[3G[Jda[5G[3G[Jd[4Gb.todos.find(P[3G[Jdb.todos.find([17GP[3G[Jdb.todos.find([17G{})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("61ddc2685c0bde5fdb23dde4"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("61ddc2685c0bde5fdb23dde5"), "text" : "test123", "done" : true }
+> db.tosd[3G[Jdb.tos[9G[3G[Jdb.to[8Gdos.unser[3G[Jdb.todos.unse[16G[3G[Jdb.todos.uns[15G[3G[Jdb.todos.un[14G[3G[Jdb.todos.u[13G[3G[Jdb.todos.[12GinsertOne({"text[3G[Jdb.todos.insertOne({"text[28G
+uncaught exception: SyntaxError: "" literal not terminated before end of script :
+@(shell):1:25
+> [3G[Jdb.todos.insertOne({"text[28G": "Increase the number of tools in my toolbelt", done[3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my toolbelt", don[81G[3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my toolbelt", do[80G[3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my toolbelt", d[79G[3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my toolbelt", [78G"done"L[3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my toolbelt", "done"[84G: false})[3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my toolbelt", "done": false})[93G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("61de5346f675450d78238bde")
+}
+> [3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my toolbelt", "done": false})[93G[3G[Jdb.todos.insertOne({"text[28G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("61ddc2685c0bde5fdb23dde4"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("61ddc2685c0bde5fdb23dde5"), "text" : "test123", "done" : true }
+{ "_id" : ObjectId("61de5346f675450d78238bde"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+]0;tam@DESKTOP-R8039K3: /mnt/d/part12-containers-applications[01;32mtam@DESKTOP-R8039K3[00m:[01;34m/mnt/d/part12-containers-applications[00m$ exit
+exit
+
+Script done on 2022-01-12 11:04:43+07:00 [COMMAND_EXIT_CODE="0"]
