@@ -18,10 +18,10 @@ services:
     volumes:
       - ./todo-backend/redis_data:/data
   todo-backend:
-    image: todo-backend-dev
+    image: todo-backend
     build:
       context: ./todo-backend/
-      dockerfile: dev.Dockerfile
+      dockerfile: Dockerfile
     volumes:
       - ./todo-backend/:/usr/src/app
     ports:
@@ -36,13 +36,13 @@ services:
     image: todo-frontend-dev
     build:
       context: ./todo-frontend/
-      dockerfile: dev.Dockerfile
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_BACKEND_URL=api/
     volumes:
       - ./todo-frontend/:/usr/src/app
     ports:
       - 4000:4000
-    environment:
-      - REACT_APP_BACKEND_URL=api/
   nginx:
     image: nginx
     volumes:
